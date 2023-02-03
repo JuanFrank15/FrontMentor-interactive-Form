@@ -4,7 +4,8 @@
   "description": "project will be an excellent way to practice DOM manipulation and form validation while also putting your HTML and CSS skills",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch styles.scss styles.css"
   },
   "repository": {
     "type": "git",

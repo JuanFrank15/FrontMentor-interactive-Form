@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting the font size and font family for the body. */
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  left: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 483px;
+  background-image: url(/src/assets/bg-main-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 184px;
+  left: 164px;
+}
+.card-container-front {
+  position: relative;
+  margin-bottom: 29px;
+}
+.card-container-front-number {
+  position: absolute;
+  height: 36px;
+  left: 7.16%;
+  right: 9.62%;
+  top: calc(50% - 18px + 34.5px);
+}
+.card-container-front-number span {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 3.42222px;
+  color: hsl(0deg, 0%, 100%);
+}
+.card-container-front-info {
+  display: flex;
+  position: absolute;
+  left: 7.16%;
+  right: 7.13%;
+  top: 81.84%;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+}
+.card-container-front-info-name {
+  position: absolute;
+  left: 0%;
+}
+.card-container-front-info-date {
+  position: absolute;
+  right: 0%;
+}
+.card-container-back {
+  position: relative;
+  transform: translateX(94px);
+}
+.card-container-back span {
+  position: absolute;
+  top: 111px;
+  left: 358px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-container label {
+  color: hsl(278deg, 68%, 11%);
+}
+.login-container input {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  padding-left: 1.15em;
+  margin-top: 9px;
+  color: hsl(270deg, 3%, 87%);
+  border: 1px solid hsl(279deg, 6%, 55%);
+  border-radius: 8px;
+  opacity: 0.25;
+  cursor: pointer;
+}
+.login-container input:focus {
+  border: 1px solid hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
+  opacity: 1;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 60%;
+}
+.form-container button {
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 23px;
+  width: 25rem;
+  height: 3rem;
+  background-color: hsl(278deg, 68%, 11%);
+  border: 1px solid hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-container-info-number, .form-container-info-name {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+.form-container-info input {
+  width: 25rem;
+  height: 3rem;
+}
+
+.form-container-date {
+  display: inline-flex;
+  margin-bottom: 40px;
+}
+.form-container-date-mmyy {
+  display: flex;
+}
+.form-container-date-mmyy input {
+  margin-right: 10px;
+  width: 4.6rem;
+  height: 3rem;
+}
+.form-container-date-cvc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.form-container-date-cvc input {
+  width: 13.6rem;
+  height: 3rem;
+}
+
+.error_Name,
+.error_Number,
+.error_MM,
+.error_YY,
+.error_CVC {
+  display: none;
+  margin-top: 0.5em;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: rgba(206, 14, 14, 0.785);
+}
+
+/*# sourceMappingURL=styles.css.map */
