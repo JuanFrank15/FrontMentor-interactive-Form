@@ -45,8 +45,8 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 184px;
-  left: 164px;
+  top: 20.78%;
+  left: 11.39%;
 }
 .card-container-front {
   position: relative;
@@ -116,25 +116,21 @@ body {
   letter-spacing: 1px;
   padding-left: 1.15em;
   margin-top: 9px;
-  color: hsl(270deg, 3%, 87%);
-  border: 1px solid hsl(279deg, 6%, 55%);
+  outline: none;
+  border: 1px solid hsl(278deg, 94%, 30%);
   border-radius: 8px;
-  opacity: 0.25;
+  opacity: 2;
   cursor: pointer;
 }
-.login-container input:focus {
-  border: 1px solid hsl(249deg, 99%, 64%) to hsl(278deg, 94%, 30%);
-  opacity: 1;
+.login-container .redBorder {
+  border: 1px solid hsl(0deg, 100%, 66%);
 }
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 25%;
-  left: 60%;
+.login-container input::placeholder {
+  font-size: 16px;
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.6;
 }
-.form-container button {
+.login-container button {
   text-decoration: none;
   text-align: center;
   font-size: 18px;
@@ -148,10 +144,28 @@ body {
   cursor: pointer;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 60%;
+}
+
 .form-container-info-number, .form-container-info-name {
   display: flex;
   flex-direction: column;
   margin-bottom: 26px;
+}
+.form-container-info-name span {
+  position: absolute;
+  top: calc(50% - 7.5px - 106.5px);
+  left: 0%;
+}
+.form-container-info-number span {
+  position: absolute;
+  top: calc(50% - 7.5px - 1px);
+  left: 0%;
 }
 .form-container-info input {
   width: 25rem;
@@ -175,22 +189,68 @@ body {
   flex-direction: column;
   margin-left: 15px;
 }
+.form-container-date-cvc span {
+  position: absolute;
+  top: calc(50% - 7.5px + 105px);
+}
 .form-container-date-cvc input {
   width: 13.6rem;
   height: 3rem;
 }
 
-.error_Name,
-.error_Number,
-.error_MM,
-.error_YY,
-.error_CVC {
-  display: none;
-  margin-top: 0.5em;
+.confirm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.confirm-container img {
+  margin-bottom: 35px;
+}
+.confirm-container h2 {
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 3.42222px;
+  margin-bottom: 16px;
+  color: hsl(278deg, 68%, 11%);
+}
+.confirm-container p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 48px;
+  color: hsl(279deg, 6%, 55%);
+}
+
+.form-container-date-mm {
+  display: flex;
+  flex-direction: column;
+}
+.form-container-date-mm span {
+  position: absolute;
+  top: calc(50% - 7.5px + 105px);
+  left: 0%;
+}
+
+.form-container-date-yy {
+  display: flex;
+  flex-direction: column;
+}
+.form-container-date-yy span {
+  position: absolute;
+  top: calc(50% - 7.5px + 105px);
+  left: 22%;
+}
+
+.error {
   font-size: 12px;
   text-transform: none;
   letter-spacing: normal;
   color: rgba(206, 14, 14, 0.785);
+}
+
+.inactive {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
