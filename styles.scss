@@ -25,42 +25,42 @@ body {
   line-height: 23px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  min-height: 100vh;
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .logo {
   position: absolute;
   z-index: 1;
   top: 28px;
-  left: 32px;
+  left: -64px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  width: 483px;
+  height: 100vh;
+  width: 50vw;
   background-image: url(/src/assets/bg-main-desktop.png);
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 59% 100%;
 
   &-container {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 20.78%;
-    left: 11.39%;
+    left: 20%;
 
     &-front {
       position: relative;
+      transform: translateX(-98px);
       margin-bottom: 29px;
 
       &-number {
@@ -106,7 +106,7 @@ body {
 
     &-back {
       position: relative;
-      transform: translateX(94px);
+
       span {
         position: absolute;
         top: 111px;
@@ -125,6 +125,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  height: 100%;
 
   label {
     color: $neutral-very-dark-violet;
@@ -137,14 +139,13 @@ body {
     padding-left: 1.15em;
     margin-top: 9px;
     outline: none;
-    border: 1px solid hsl(278, 94%, 30%) ;
+    border: 1px solid hsl(278, 94%, 30%);
     border-radius: 8px;
     opacity: 2;
     cursor: pointer;
   }
-  .redBorder{
-    border: 1px solid $primary-Red; 
-    
+  .redBorder {
+    border: 1px solid $primary-Red;
   }
 
   input::placeholder {
@@ -183,18 +184,17 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 26px;
-    
   }
 
   &-name span {
     position: absolute;
-    top: calc(50% - 15px/2 - 106.5px);
-      left: 0%;
+    top: calc(50% - 15px / 2 - 106.5px);
+    left: 0%;
   }
 
-  &-number span{
+  &-number span {
     position: absolute;
-    top: calc(50% - 15px/2 - 1px);
+    top: calc(50% - 15px / 2 - 1px);
     left: 0%;
   }
 
@@ -224,14 +224,12 @@ body {
     margin-left: 15px;
     span {
       position: absolute;
-      top: calc(50% - 15px/2 + 105px);
-      
+      top: calc(50% - 15px / 2 + 105px);
     }
 
     input {
       width: 13.6rem;
       height: 3rem;
-      
     }
   }
 }
@@ -261,24 +259,22 @@ body {
   }
 }
 
-.form-container-date-mm{
+.form-container-date-mm {
   display: flex;
   flex-direction: column;
   span {
     position: absolute;
-    top: calc(50% - 15px/2 + 105px);
-    left:0%;
+    top: calc(50% - 15px / 2 + 105px);
+    left: 0%;
   }
-
-} 
-.form-container-date-yy{
+}
+.form-container-date-yy {
   display: flex;
   flex-direction: column;
   span {
     position: absolute;
-    top: calc(50% - 15px/2 + 105px);
+    top: calc(50% - 15px / 2 + 105px);
     left: 22%;
-    
   }
 }
 
@@ -289,7 +285,113 @@ body {
   color: rgba(206, 14, 14, 0.785);
 }
 
-
 .inactive {
   display: none;
+}
+
+@media (max-width: 1190px) {
+  .card-container {
+    left: 10%;
+  }
+
+  .form-container {
+    left: 55%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    z-index: 3;
+  }
+
+  .card {
+    width: 100%;
+    height: 50%;
+    background-image: url(/src/assets/bg-main-mobile.png);
+    background-size: 100% 72%;
+
+    &-container {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      top: 3%;
+      left: 29%;
+
+      &-front {
+        position: absolute;
+        z-index: 2;
+      }
+
+      &-back {
+        position: absolute;
+        top: 32.5%;
+        z-index: 1;
+      }
+    }
+  }
+
+  .login-container {
+    width: 100%;
+    height: 50%;
+  }
+
+  .form-container {
+    top: 50%;
+    left: 30%;
+  }
+
+  .confirm-container{
+    position: absolute;
+    top: 52%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 390px) {
+  .logo {
+    z-index: 3;
+    top: 19.5%;
+  }
+  .card {
+    background-size: 100%;
+
+    &-container {
+      transform: scale(0.6);
+      left: 11.5%;
+      top: 0%;
+
+      &-front {
+        z-index: 2;
+        top: 10.5%;
+      }
+
+      &-back {
+        top: -25%;
+        left: 2%;
+        z-index: 1;
+      }
+    }
+  }
+
+  .login-container {
+  }
+
+  .form-container {
+    position: absolute;
+    left: -2%;
+    top: 30%;
+    transform: scale(0.6);
+  }
+
+  .confirm-container {
+    transform: scale(0.6);
+    position: absolute;
+    top: 35%;
+    left: -2%;
+  }
 }

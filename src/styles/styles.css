@@ -14,42 +14,42 @@ body {
   line-height: 23px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  min-height: 100vh;
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .logo {
   position: absolute;
   z-index: 1;
   top: 28px;
-  left: 32px;
+  left: -64px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  width: 483px;
+  height: 100vh;
+  width: 50vw;
   background-image: url(/src/assets/bg-main-desktop.png);
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 59% 100%;
 }
 .card-container {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 20.78%;
-  left: 11.39%;
+  left: 20%;
 }
 .card-container-front {
   position: relative;
+  transform: translateX(-98px);
   margin-bottom: 29px;
 }
 .card-container-front-number {
@@ -89,7 +89,6 @@ body {
 }
 .card-container-back {
   position: relative;
-  transform: translateX(94px);
 }
 .card-container-back span {
   position: absolute;
@@ -106,6 +105,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  height: 100%;
 }
 .login-container label {
   color: hsl(278deg, 68%, 11%);
@@ -251,6 +252,95 @@ body {
 
 .inactive {
   display: none;
+}
+
+@media (max-width: 1190px) {
+  .card-container {
+    left: 10%;
+  }
+  .form-container {
+    left: 55%;
+  }
+}
+@media (max-width: 1050px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    z-index: 3;
+  }
+  .card {
+    width: 100%;
+    height: 50%;
+    background-image: url(/src/assets/bg-main-mobile.png);
+    background-size: 100% 72%;
+  }
+  .card-container {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    top: 3%;
+    left: 29%;
+  }
+  .card-container-front {
+    position: absolute;
+    z-index: 2;
+  }
+  .card-container-back {
+    position: absolute;
+    top: 32.5%;
+    z-index: 1;
+  }
+  .login-container {
+    width: 100%;
+    height: 50%;
+  }
+  .form-container {
+    top: 50%;
+    left: 30%;
+  }
+  .confirm-container {
+    position: absolute;
+    top: 52%;
+    left: 30%;
+  }
+}
+@media (max-width: 390px) {
+  .logo {
+    z-index: 3;
+    top: 19.5%;
+  }
+  .card {
+    background-size: 100%;
+  }
+  .card-container {
+    transform: scale(0.6);
+    left: 11.5%;
+    top: 0%;
+  }
+  .card-container-front {
+    z-index: 2;
+    top: 10.5%;
+  }
+  .card-container-back {
+    top: -25%;
+    left: 2%;
+    z-index: 1;
+  }
+  .form-container {
+    position: absolute;
+    left: -2%;
+    top: 30%;
+    transform: scale(0.6);
+  }
+  .confirm-container {
+    transform: scale(0.6);
+    position: absolute;
+    top: 35%;
+    left: -2%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
