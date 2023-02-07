@@ -66,7 +66,7 @@ body {
   justify-content: center;
   height: 100vh;
   width: 50vw;
-  background-image: url(/src/assets/bg-main-desktop.png);
+  background-image: linear-gradient(to right bottom, #21092f, #270c35, #2d0e3b, #341042, #3b1248, #401349, #461549, #4b164a, #4f1845, #511b41, #521f3d, #53233a);
   background-repeat: no-repeat;
   background-size: 59% 100%;
 
@@ -350,7 +350,7 @@ body {
   .card {
     width: 100%;
     height: 50%;
-    background-image: url(/src/assets/bg-main-mobile.png);
+    background-image: linear-gradient(to right top, #21092f, #270c35, #2d0e3b, #341042, #3b1248, #401349, #461549, #4b164a, #4f1845, #511b41, #521f3d, #53233a);
     background-size: 100% 72%;
 
     &-container {
@@ -401,7 +401,7 @@ body {
   }
 /* Scaling the card to 60% of its original size and reposition the cards and their elements*/
   .card {
-    background-size: 100%;
+    background-size: 100% 50%;
 
     &-container {
       
