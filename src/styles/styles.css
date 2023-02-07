@@ -1,5 +1,14 @@
 /* 
 # Front-end Style Guide
+
+
+
+
+
+
+
+
+
 /********************************** Typography **********************************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Space+Grotesk:wght@500&display=swap");
 /********************************** COLORS **********************************/
@@ -46,7 +55,7 @@ body {
   justify-content: center;
   height: 100vh;
   width: 50vw;
-  background-image: url(/src/assets/bg-main-desktop.png);
+  background-image: url(./src/assets/bg-main-desktop.png);
   background-repeat: no-repeat;
   background-size: 59% 100%;
 }
@@ -293,7 +302,7 @@ body {
   .card {
     width: 100%;
     height: 50%;
-    background-image: url(/src/assets/bg-main-mobile.png);
+    background-image: url(./src/assets/bg-main-mobile.png);
     background-size: 100% 72%;
   }
   .card-container {
