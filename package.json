@@ -2,7 +2,7 @@
   "name": "frontendmentor-interactive-card-details-form-main",
   "version": "1.0.0",
   "description": "project will be an excellent way to practice DOM manipulation and form validation while also putting your HTML and CSS skills",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./styles.scss:src/styles/styles.css"

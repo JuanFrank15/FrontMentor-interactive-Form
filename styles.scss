@@ -1,15 +1,31 @@
+/* 
+# Front-end Style Guide
+
+
+
+
+
+
+
+
+
+/********************************** Typography **********************************/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Space+Grotesk:wght@500&display=swap");
 
-// Primary Color
+/********************************** COLORS **********************************/
+/* Primary Color */
 $primary-linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
 $primary-Red: hsl(0, 100%, 66%);
 
-// Neutral Color
+/* Secondary Color */
 $neutral-white: hsl(0, 0%, 100%);
 $neutral-light-grayish-grey: hsl(270, 3%, 87%);
 $neutral-dark-grayish-grey: hsl(279, 6%, 55%);
 $neutral-very-dark-violet: hsl(278, 68%, 11%);
 
+
+/********************************** MAIN **********************************/
+/* Setting the margin, padding and box-sizing for all elements. */
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +43,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Setting the display of the main. It is also setting the height and widt */
 .main-container {
   display: flex;
   align-items: center;
@@ -34,6 +51,8 @@ body {
   width: 100vw;
 }
 
+
+/********************************** CARD **********************************/
 .logo {
   position: absolute;
   z-index: 1;
@@ -120,6 +139,8 @@ body {
   }
 }
 
+
+/********************************** FORM **********************************/
 .login-container {
   display: flex;
   flex-direction: column;
@@ -268,6 +289,7 @@ body {
     left: 0%;
   }
 }
+
 .form-container-date-yy {
   display: flex;
   flex-direction: column;
@@ -278,6 +300,10 @@ body {
   }
 }
 
+
+
+/********************************** UTILS **********************************/
+/* A class that is used to change the style of the error message. */
 .error {
   font-size: 12px;
   text-transform: none;
@@ -285,10 +311,17 @@ body {
   color: rgba(206, 14, 14, 0.785);
 }
 
+/* A class that is used to hide the elements that are not needed at the moment. */
 .inactive {
   display: none;
 }
 
+
+
+
+/********************************** MEDIA QUERIES **********************************/
+
+/* A media query. It is used to change the style of the page when the screen size is less than 1190px. */
 @media (max-width: 1190px) {
   .card-container {
     left: 10%;
@@ -299,15 +332,21 @@ body {
   }
 }
 
+
+/* A media query. It is used to change the style of the page when the screen size is less than 1050px. */
 @media (max-width: 1050px) {
+ /* Changing the display of the main-container to flex and the flex-direction to column. */
   .main-container {
     display: flex;
     flex-direction: column;
   }
+  
   .logo {
     z-index: 3;
   }
 
+ /* Setting the width and height of the card. It is also setting the
+ background image and the background size and reposition the cards and their elements*/
   .card {
     width: 100%;
     height: 50%;
@@ -335,6 +374,7 @@ body {
     }
   }
 
+  /* Setting the width and height of the login-container and reposition the form and their elements */
   .login-container {
     width: 100%;
     height: 50%;
@@ -345,6 +385,7 @@ body {
     left: 30%;
   }
 
+  /* Setting the position of the confirm-container */
   .confirm-container{
     position: absolute;
     top: 52%;
@@ -352,15 +393,18 @@ body {
   }
 }
 
+/* A media query. It is used to change the style of the page when the screen size is less than 390px. */
 @media (max-width: 390px) {
   .logo {
     z-index: 3;
     top: 19.5%;
   }
+/* Scaling the card to 60% of its original size and reposition the cards and their elements*/
   .card {
     background-size: 100%;
 
     &-container {
+      
       transform: scale(0.6);
       left: 11.5%;
       top: 0%;
@@ -377,10 +421,7 @@ body {
       }
     }
   }
-
-  .login-container {
-  }
-
+/* Scaling the form to 60% of its original size and reposition the cards and their elements*/
   .form-container {
     position: absolute;
     left: -2%;
